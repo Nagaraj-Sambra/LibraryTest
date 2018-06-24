@@ -11,7 +11,8 @@ import {
   ClinxBuyNowComponent,
   ClinxCartPageComponent,
   ClinxContactPageComponent,
-  ClinxLoginComponent, ClinxPaymentReturnPageComponent,
+  ClinxLoginComponent,
+  ClinxPaymentReturnPageComponent,
   ClinxSaleListPageComponent,
   ClinxSalePageComponent,
   ClinxSignUpComponent, ClinxWebLibraryComponent, ClinxWebLibraryModule
@@ -35,7 +36,7 @@ const routes: Routes = [
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'library-test'}),
     ClinxWebLibraryModule.forRoot({
       website_name: 'Optibiz',
       company_logo: 'assets/Clinx_Circle_Large_NBlur.png',
